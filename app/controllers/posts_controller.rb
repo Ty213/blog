@@ -15,10 +15,10 @@ class PostsController < ApplicationController
         post = Post.new(post_params)
         # @user.posts.create(post_params)
 		if post.save
-			flash[:message] = 'Your post was created successfully'
+			# flash[:message] = 'Your post was created successfully'
 			redirect_to "/users/#{@user.id}"
 		else
-			flash[:message] = 'try again'
+			# flash[:message] = 'try again'
 			render '/posts/new'
 		end
     end
