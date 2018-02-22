@@ -11,9 +11,9 @@
       <nav class='navbar'>
         <ul>
           <li><a class="navbar__link" href='/'>Home</a></li> 
-          <li><a class="navbar__link" href=''>Posts</a></li>
-          <li><a class="navbar__link" href=''>All users</a></li>
-          <li><a class="navbar__link" href=''>Edit Account</a></li>
+          <li><a class="navbar__link" href='/posts'>Posts</a></li>
+          <li><a class="navbar__link" href='/users'>All users</a></li>
+          <li><%= link_to 'Edit', "/users/#{session[:user_id]}/edit", {method: 'get'} %></li>
         </ul>
       </nav>
        
