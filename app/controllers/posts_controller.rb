@@ -6,14 +6,17 @@ class PostsController < ApplicationController
     end
 
     def new
+        @user = User.find(session[:user_id])
         @post = Post.new
     end
 
     def create
-		post = Post.new(post_params)
+        @user = User.find(session[:user_id])
+        post = Post.new(post_params)
+        # @user.posts.create(post_params)
 		if post.save
 			flash[:message] = 'Your post was created successfully'
-			redirect_to '/posts'
+			redirect_to "/users/#{@user.id}"
 		else
 			flash[:message] = 'try again'
 			render '/posts/new'
@@ -23,7 +26,7 @@ class PostsController < ApplicationController
     private
 
 def post_params
-	params.require(:post).permit(:title, :content)
+	params.require(:post).permit(:title, :content, :user_id)
 end
 
 end

@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+   
+      <nav class='navbar'>
+        <li><a href='/'>Home</a></li> 
+        <li><a href=''>Posts</a></li>
+        <li><a href=''>All users</a></li>
+        <li><a href=''>Edit Account</a></li>
+      </nav>
+       
+     
+
+  	 <%= flash[:message] if flash[:message] %>
 
 <%= yield %>
 
