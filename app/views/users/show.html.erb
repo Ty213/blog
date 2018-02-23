@@ -1,8 +1,10 @@
 <h1>Welcome, <%= @user.fname %> <%= @user.lname %></h1>
 
+<div class="post">
 <% @posts.each do |p| %>
-<h2><%= p.title %></h2>
+<h2><a href="/posts/<%= p.id %>"<%= p.title %></a></h2>
 <p><%= p.content %></p>
 <% end %>
+</div>
 
 <a href="/posts/new"><button type="button">New Post</button></a>

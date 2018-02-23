@@ -22,6 +22,14 @@ class PostsController < ApplicationController
 			render '/posts/new'
 		end
     end
+
+    def show
+        @post = Post.find_by_id(params[:id])
+    end
+
+    def destroy
+        
+    end
     
     private
 
