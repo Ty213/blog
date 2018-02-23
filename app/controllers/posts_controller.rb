@@ -28,7 +28,24 @@ class PostsController < ApplicationController
     end
 
     def destroy
-        
+        @post = Post.find_by_id(params[:id])
+        user = User.find_by_id(@post.user_id)
+        @post.destroy()
+        redirect_to "/users/#{user.id}"
+    end
+
+    def edit
+        @post = Post.find_by_id(params[:id])
+    end
+
+    def update
+		@post = Post.find(params[:id])
+		if @post.update(post_params)
+			redirect_to "/posts/#{@post.id}"
+		else
+			flash[:message] = 'try again'
+			render "/posts/#{@post.id}/edit"
+		end
     end
     
     private

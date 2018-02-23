@@ -1,0 +1,8 @@
+<%= form_for @post do |f| %>
+
+title:<%= f.text_field :title %><br>
+content:<%= f.text_field :content %><br>
+<%= f.submit %>
+<% end %>
+
+<%= link_to "Delete",  "/posts/#{@post.id}",  method: :delete, data: { confirm: 'Are you sure?' } %>
