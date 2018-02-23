@@ -13,7 +13,7 @@
           <li><a class="navbar__link" href='/'>Home</a></li> 
           <li><a class="navbar__link" href='/posts'>Posts</a></li>
           <li><a class="navbar__link" href='/users'>All users</a></li>
-          <li><%= link_to 'Edit', "/users/#{session[:user_id]}/edit", {method: 'get'} %></li>
+          <li><div class="navbar__icon"><%= link_to '', "/users/#{session[:user_id]}/edit", {method: 'get'} %></div></li>
         </ul>
       </nav>
        
