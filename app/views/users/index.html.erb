@@ -1,6 +1,7 @@
-<h1>Testing</h1>
+<h1>All users</h1>
 
 <% @users.each do |u| %>
-<%= u.fname %> <br />
+
+<a href="/users/<%= u.id %>"><%= u.fname %></a> <br />
 <%= u.lname %> <br />
 <% end %>

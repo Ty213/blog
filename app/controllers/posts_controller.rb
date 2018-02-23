@@ -25,6 +25,8 @@ class PostsController < ApplicationController
 
     def show
         @post = Post.find_by_id(params[:id])
+        @comments = Comment.where(post_id: params[:id])
+        @comment = Comment.new
     end
 
     def destroy
