@@ -15,12 +15,19 @@
     <%= submit_tag("Comment") %>
 <% end %>
 </div>
+
+
+<div class="commentsBox">
+
 <h2>Comments <span class="commentsButton">\/</span></h2>
-<ul class="comments">
+
+<ul class="commentsList">
+
 <% @comments.each do |c| %>
-<li>
-<p><%= c.content %></p>
-</li>
+<li class="commentsItem"><%= c.content %></li>
 <% end %>
 
+</ul>
+</div>
+<%= javascript_include_tag('comments.js') %>
 
