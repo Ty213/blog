@@ -5,12 +5,14 @@
 }
 .commentsBox {
     text-align: center;
-    border: 2px solid red;
 }
 .commentsList {
-    border: 2px solid;
+    display: none;
     list-style: none;
 }
 .commentsItem {
-    background-color: rgb(0, 168, 65);
+
+}
+.commentsButton:hover {
+    cursor: pointer;
 }
