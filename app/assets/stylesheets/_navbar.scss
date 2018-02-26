@@ -1,0 +1,40 @@
+.navbar {
+    height: 50px;
+}
+.navbar__icon {
+    background-image: url("settings.png");
+    background-size: 100%;
+    width: 50px;
+    background-repeat: no-repeat;
+    height: 50px;
+    
+}
+.navbar__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 168, 65);
+}
+
+.navbar__item {
+    float: left;
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+// /* Change the link color to #111 (black) on hover */
+// li a:hover {
+//     background-color: rgb(0, 150, 50);
+// }
+.navbar__item:last-child {
+    border-right: none;
+    float: right;
+}

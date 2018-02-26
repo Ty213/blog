@@ -1,0 +1,12 @@
+<div class="post">
+<div class="post__title">
+<h1>New post</h1>
+</div>
+<%= form_for @post do |f| %>
+<%= f.text_field :title, placeholder: "Title" %>
+<br />
+<%= f.text_area :content %>
+<br />
+ <%= f.hidden_field :user_id, :value => @current_user.id %>
+<%= f.submit %>
+<% end %>

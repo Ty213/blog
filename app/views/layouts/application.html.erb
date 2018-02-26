@@ -7,6 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+   
+      <nav class='navbar'>
+        <ul class="navbar__list">
+          <li class="navbar__item"><a class="navbar__link" href='/'>Home</a></li> 
+          <li class="navbar__item"><a class="navbar__link" href='/posts'>Posts</a></li>
+          <li class="navbar__item"><a class="navbar__link" href='/users'>All users</a></li>
+          <li class="navbar__item"><div class="navbar__icon"><%= link_to '', "/users/#{session[:user_id]}/edit", {method: 'get'} %></div></li>
+        </ul>
+      </nav>
+       
+     
+
+  	 <%= flash[:message] if flash[:message] %>
 
 <%= yield %>
 
