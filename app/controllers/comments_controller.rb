@@ -8,13 +8,12 @@ class CommentsController < ApplicationController
         # @user.posts.create(post_params)
 		if @comment.save
 			# flash[:message] = 'Your post was created successfully'
-			redirect_to "/users/#{@user.id}"
+			redirect_to "/posts/#{params[:post_id]}"
 		else
 			# flash[:message] = 'try again'
 			render '/posts/new'
 		end
     end
-
 
     def comment_params
         params.require(:comment).permit(:content, :user_id, :post_id)

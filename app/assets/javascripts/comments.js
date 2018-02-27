@@ -6,6 +6,7 @@ $(document).on('turbolinks:load', function() {
    var commentsButton = document.querySelector('.commentsButton');
    var commentsList = document.querySelector('.commentsList');
    console.log(commentsButton);
+   commentsList.style.display = "none";
 
    commentsButton.addEventListener("click", function() {
 
