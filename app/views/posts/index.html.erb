@@ -1,3 +1,8 @@
 <% @posts.each do |p|%>
-<%= p.title %> <% p.content%>
+<div class="post">
+<div class="post__title">
+<a href="/posts/<%= p.id %>"><h1><%= p.title %></h1></a>
+</div>
+<p><%= p.content%></p>
+</div>
 <% end %>

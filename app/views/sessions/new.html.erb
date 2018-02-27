@@ -1,12 +1,15 @@
-<h2>Login</h2>
-
-
+<div class="loginBox">
+<div class="loginBox__title">Login</div>
 <%= form_tag(login_path) do  %>
-<p>Email:</p>
+<p>Email</p>
 <%= text_field_tag :email %>
-<p>Password:</p>
+<p>Password</p>
 <%= text_field_tag :password %> <br />
+
 <%= submit_tag 'Login' %>
+
 <% end %>
-<hr />
+<div class="loginBox__signup">
 <p>Don't have an account? <a href="/users/new">Signup</a></p>
+</div>
+</div>
