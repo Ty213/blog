@@ -14,7 +14,6 @@ class SessionsController < ApplicationController
 		end
 	end
 
-
 	def destroy
 		session[:user_id] = nil
 		# flash[:message] = 'logging out ok'

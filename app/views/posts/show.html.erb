@@ -4,7 +4,10 @@
 </div>
 <%= @post.content %>
 <br />
+<% if session[:user_id] == @post.user_id %>
 <a href="/posts/<%= @post.id %>/edit"><button class="button">Edit</button></a>
+<% end %>
+
 </div>
 <div class="commentBox">
     <%= form_for @comment, :url => "/posts/#{@post.id}/comments" do |f| %>
